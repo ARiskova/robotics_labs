@@ -8,6 +8,7 @@
 from __future__ import annotations
 import numpy as np
 from numpy.typing import ArrayLike
+from copy import deepcopy
 
 from robotics_toolbox.core import SO3
 
@@ -45,8 +46,8 @@ class SE3:
 
     def set_from(self, other: SE3):
         """Copy the properties into current instance."""
-        self.translation = other.translation
-        self.rotation = other.rotation
+        self.translation = deepcopy(other.translation)
+        self.rotation = deepcopy(other.rotation)
 
     def __eq__(self, other: SE3) -> bool:
         """Returns true if two transformations are almost equal."""
