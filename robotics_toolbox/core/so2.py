@@ -50,3 +50,6 @@ class SO2:
 
     def __hash__(self):
         return id(self)
+    
+    def __str__(self):
+        return ""
