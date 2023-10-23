@@ -52,4 +52,4 @@ class SO2:
         return id(self)
     
     def __str__(self):
-        return ""
+        return "{}\n{}".format(self.rot[0, :], self.rot[1, :])
